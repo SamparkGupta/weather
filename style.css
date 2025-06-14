@@ -1,10 +1,13 @@
+/* style.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-image: url("bgweather.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    hieght:100%;
-}
-article p{
-    color :red;
 }
