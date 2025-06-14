@@ -3,7 +3,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    hieght:100vh;
+    hieght:100%;
 }
 article p{
     color :red;
