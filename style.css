@@ -1,3 +1,10 @@
-h1{
-    background-image:"bgweather" ;
+body {
+    background-image: url("bgweather.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    hieght:100vh;
+}
+article p{
+    color :red;
 }
