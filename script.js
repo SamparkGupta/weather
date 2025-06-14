@@ -1,4 +1,3 @@
-
 document.getElementById("b1").addEventListener("click", function(e) {
     e.preventDefault();
     var city = document.getElementById("city").value;
