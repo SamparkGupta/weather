@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <h1>Weather</h1>
-    <main>
-        <p>Enter city name</p>
-        <input type="text" id="city" placeholder="Enter city name">
-        <label for id="city"></label>
-        <button type="button" id="b1" >search</button>
-        <article>
-            <p><!--shows the weather --></p>
-        </article>
-    </main>
-    
-    <script src="script.js"></script>
+  <h1>Weather</h1>
+
+  <div class="form-container">
+    <label for="city">Enter city name</label>
+    <input type="text" id="city" placeholder="Enter city name" />
+    <button id="b1">Search</button>
+  </div>
+
+  <article>
+    <p></p>
+  </article>
+
+  <!-- Audio Element -->
+  <audio id="bg-audio" autoplay loop>
+    <source src="default.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Mute Button -->
+  <div id="mute-btn" title="Mute">🔊</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
