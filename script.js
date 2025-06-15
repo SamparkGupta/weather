@@ -53,11 +53,25 @@ document.getElementById("b1").addEventListener("click", function (e) {
       // Update background
       document.body.style.backgroundImage = `url('${imageUrl}')`;
 
-      // Update audio source
+      // Update audio source with fade-in
       const audio = document.getElementById("bg-audio");
+      const wasMuted = audio.muted;
+
       audio.src = audioFile;
-      audio.load(); // reload the new file
-      if (!audio.muted) audio.play(); // auto-play if not muted
+      audio.load();
+      audio.muted = wasMuted;
+
+      if (!audio.muted) {
+        audio.volume = 0;
+        audio.play();
+        let fadeIn = setInterval(() => {
+          if (audio.volume < 1 && !audio.muted) {
+            audio.volume = Math.min(audio.volume + 0.05, 1);
+          } else {
+            clearInterval(fadeIn);
+          }
+        }, 200);
+      }
     })
     .catch((error) => {
       console.error(error);
