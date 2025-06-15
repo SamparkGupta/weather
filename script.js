@@ -1,3 +1,4 @@
+// Handle search on button click
 document.getElementById("b1").addEventListener("click", function (e) {
   e.preventDefault();
   const city = document.getElementById("city").value.trim();
@@ -53,7 +54,7 @@ document.getElementById("b1").addEventListener("click", function (e) {
       // Update background
       document.body.style.backgroundImage = `url('${imageUrl}')`;
 
-      // Update audio source with fade-in
+      // Update audio with fade-in
       const audio = document.getElementById("bg-audio");
       const wasMuted = audio.muted;
 
@@ -77,6 +78,14 @@ document.getElementById("b1").addEventListener("click", function (e) {
       console.error(error);
       document.querySelector("article p").textContent = "Error fetching weather data.";
     });
+});
+
+// Handle Enter key for search
+document.getElementById("city").addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    document.getElementById("b1").click();
+  }
 });
 
 // Mute/unmute toggle
